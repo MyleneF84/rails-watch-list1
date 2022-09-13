@@ -1,5 +1,21 @@
-<ol>
-<%@lists.each do |list| %>
-<li><%= list.name %></li>
-<% end %>
-</ol>
+<div class="navbar-lewagon">
+
+<%= image_tag "logo.png", alt: "", width: 200 %>
+<h3>My lists</h3>
+<h3>New list</h3>
+</div>
+
+<div class="banner">
+
+</div>
+
+<div class="contrainer" >
+  <h1>See all your lists</h1>
+
+  <ol>
+  <%@lists.each do |list| %>
+    <li><%=link_to list.name, list_path(list) %></li>
+  <% end %>
+  </ol>
+
+</div>
